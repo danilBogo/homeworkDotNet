@@ -4,7 +4,7 @@
     <projectFile>Homework1/Homework1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7a59cbd-9b09-4f82-bbae-e1225a7fa532" name="Changes" comment="qee" />
+    <list default="true" id="e7a59cbd-9b09-4f82-bbae-e1225a7fa532" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +42,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.Homework1">
+  <component name="RunManager">
     <configuration name="Homework1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Homework1/bin/Debug/Homework1.exe" />
       <option name="PROGRAM_PARAMETERS" value="3 . 6" />
@@ -97,6 +97,7 @@
       <workItem from="1631311338859" duration="86000" />
       <workItem from="1631311497785" duration="213000" />
       <workItem from="1631311747548" duration="196000" />
+      <workItem from="1631375602235" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="Begin writing tests">
       <created>1631224979892</created>

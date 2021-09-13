@@ -2,7 +2,7 @@ name: .NET
 
 on:
   push:
-    branches: " [2k-164]"
+    branches: "[2k-164]"
   pull_request:
     branches: "[main]"
 

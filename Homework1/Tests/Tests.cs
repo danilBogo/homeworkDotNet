@@ -10,7 +10,8 @@ namespace Tests
         private const int WrongArgLength = 1;
         private const int WrongArgFormatInt = 2;
         private const int WrongArgFormatOperation = 3;
-
+        private const int DividingByZero = 4;
+        
         [Theory]
         [InlineData(10, 5)]
         public void TestCalculatorAddition(int value1, int value2)
@@ -202,6 +203,13 @@ namespace Tests
         public void TestMainWrongOperationAndWrongSecondValue(string[] args)
         {
             Assert.Equal(WrongArgFormatOperation, Program.Main(args));
+        }
+        
+        [Theory]
+        [InlineData(new object[] { new string[] { "3", "/", "0"} })]
+        public void TestMainDividingByZero(string[] args)
+        {
+            Assert.Equal(DividingByZero, Program.Main(args));
         }
     }
 }

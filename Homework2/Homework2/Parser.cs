@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Homework1
+namespace Homework2
 {
     public class Parser
     {

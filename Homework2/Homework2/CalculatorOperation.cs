@@ -1,4 +1,4 @@
-﻿namespace Homework1
+﻿namespace Homework2
 {
     public enum CalculatorOperation
     {

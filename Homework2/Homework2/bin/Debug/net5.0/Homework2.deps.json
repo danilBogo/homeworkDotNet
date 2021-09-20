@@ -7,14 +7,36 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "Homework2/1.0.0": {
+        "dependencies": {
+          "ClassLibrary1": "1.0.0",
+          "Microsoft.NET.Sdk.IL": "5.0.0"
+        },
         "runtime": {
           "Homework2.dll": {}
+        }
+      },
+      "Microsoft.NET.Sdk.IL/5.0.0": {},
+      "ClassLibrary1/1.0.0": {
+        "runtime": {
+          "ClassLibrary1.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Homework2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NET.Sdk.IL/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rC6DIQblXhzfxFs6JYo3ul9p6rOy2B0aDtarkl3Rm33N8VBOntNrKkscXxY1SsiBK6DICKIstr75dgQJ/P6Eog==",
+      "path": "microsoft.net.sdk.il/5.0.0",
+      "hashPath": "microsoft.net.sdk.il.5.0.0.nupkg.sha512"
+    },
+    "ClassLibrary1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

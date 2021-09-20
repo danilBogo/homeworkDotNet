@@ -1,11 +1,51 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Microsoft.NET.Sdk.IL/5.0.0": {
+        "type": "package"
+      },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.NET.Sdk.IL/5.0.0": {
+      "sha512": "rC6DIQblXhzfxFs6JYo3ul9p6rOy2B0aDtarkl3Rm33N8VBOntNrKkscXxY1SsiBK6DICKIstr75dgQJ/P6Eog==",
+      "type": "package",
+      "path": "microsoft.net.sdk.il/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "microsoft.net.sdk.il.5.0.0.nupkg.sha512",
+        "microsoft.net.sdk.il.nuspec",
+        "sdk/Sdk.props",
+        "sdk/Sdk.targets",
+        "targets/Microsoft.NET.Sdk.IL.Common.targets",
+        "targets/Microsoft.NET.Sdk.IL.targets",
+        "version.txt"
+      ]
+    },
+    "ClassLibrary1/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1/ClassLibrary1.ilproj",
+      "msbuildProject": "../ClassLibrary1/ClassLibrary1.ilproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "ClassLibrary1 >= 1.0.0",
+      "Microsoft.NET.Sdk.IL >= 5.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\danil\\.nuget\\packages\\": {},
@@ -38,7 +78,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj": {
+              "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -50,6 +94,12 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "Microsoft.NET.Sdk.IL": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

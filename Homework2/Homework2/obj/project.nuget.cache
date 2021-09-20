@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N0ftHd7Gj2Y8vBIYCJoXYRW7VAxfF+lQkcEnJUVnEJgb6RCEv6/KiThZTQbEzZfG5cIwOCw1OuH5ybbW9+K4Zg==",
+  "dgSpecHash": "nr3s+NVmpPuvboIBtg9nl5Zvdj+Du/zaz7u0A0Log3vHuS2bW48rHbpYaV4819hMreN0tzWijZTt2sZrgDSdlA==",
   "success": true,
   "projectFilePath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.net.sdk.il\\5.0.0\\microsoft.net.sdk.il.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -14,3 +14,5 @@ S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\net5.0\Homework2.d
 S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\net5.0\ref\Homework2.dll
 S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\net5.0\Homework2.pdb
 S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\net5.0\Homework2.genruntimeconfig.cache
+S:\GitRepository\homeworkDotNet\Homework2\Homework2\bin\Debug\net5.0\ClassLibrary1.dll
+S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\net5.0\Homework2.csproj.CopyComplete

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qfaC29jXE3oNiVWzehcEcXvkUVDrrnxepzxb/pb5Urb0y7K5Ih65DBQS+fuBVYHrWJiFX9gpG7T9BgefShvSTQ==",
+  "dgSpecHash": "8uGw4YQvm55TmnqwcsQ8jn8SMqIt04nJ9ytZFS7oPDiinAnwrTdVif1E0BWSMb9SmklzLpj6HZBMoDcUHF0gPA==",
   "success": true,
   "projectFilePath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danil\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.net.sdk.il\\5.0.0\\microsoft.net.sdk.il.5.0.0.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.4\\microsoft.net.test.sdk.16.9.4.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

@@ -1,0 +1,5 @@
+S:\GitRepository\homeworkDotNet\Homework2\ClassLibrary1\bin\Debug\netstandard2.0\ClassLibrary1.deps.json
+S:\GitRepository\homeworkDotNet\Homework2\ClassLibrary1\bin\Debug\netstandard2.0\ClassLibrary1.dll
+S:\GitRepository\homeworkDotNet\Homework2\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.ilproj.AssemblyReference.cache
+S:\GitRepository\homeworkDotNet\Homework2\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.ilproj.CoreCompileInputs.cache
+S:\GitRepository\homeworkDotNet\Homework2\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.dll

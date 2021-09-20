@@ -48,6 +48,9 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
+      "Microsoft.NET.Sdk.IL/5.0.0": {
+        "type": "package"
+      },
       "Microsoft.NET.Test.Sdk/16.9.4": {
         "type": "package",
         "dependencies": {
@@ -1671,9 +1674,23 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        }
+      },
       "Homework2/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ClassLibrary1": "1.0.0",
+          "Microsoft.NET.Sdk.IL": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/Homework2.dll": {}
         },
@@ -1860,6 +1877,23 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Microsoft.NET.Sdk.IL/5.0.0": {
+      "sha512": "rC6DIQblXhzfxFs6JYo3ul9p6rOy2B0aDtarkl3Rm33N8VBOntNrKkscXxY1SsiBK6DICKIstr75dgQJ/P6Eog==",
+      "type": "package",
+      "path": "microsoft.net.sdk.il/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "microsoft.net.sdk.il.5.0.0.nupkg.sha512",
+        "microsoft.net.sdk.il.nuspec",
+        "sdk/Sdk.props",
+        "sdk/Sdk.targets",
+        "targets/Microsoft.NET.Sdk.IL.Common.targets",
+        "targets/Microsoft.NET.Sdk.IL.targets",
+        "version.txt"
       ]
     },
     "Microsoft.NET.Test.Sdk/16.9.4": {
@@ -5916,6 +5950,11 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "ClassLibrary1/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1/ClassLibrary1.ilproj",
+      "msbuildProject": "../ClassLibrary1/ClassLibrary1.ilproj"
     },
     "Homework2/1.0.0": {
       "type": "project",

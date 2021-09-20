@@ -1,6 +1,0 @@
-S:\GitRepository\homeworkDotNet\Homework2\Homework2\bin\Debug\Homework2.exe
-S:\GitRepository\homeworkDotNet\Homework2\Homework2\bin\Debug\Homework2.pdb
-S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\Homework2.csprojAssemblyReference.cache
-S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\Homework2.csproj.CoreCompileInputs.cache
-S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\Homework2.exe
-S:\GitRepository\homeworkDotNet\Homework2\Homework2\obj\Debug\Homework2.pdb

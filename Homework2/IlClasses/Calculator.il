@@ -1,14 +1,9 @@
-﻿.assembly IlClasses
-{
-  .ver 1:0:0:0
-}
-
-.class public abstract sealed auto ansi beforefieldinit
+﻿.class public abstract sealed auto ansi beforefieldinit
   IlClasses.Calculator
-    extends [System.Runtime]System.Object
+    extends System.Object
 {
 
-  .method public hidebysig static int32
+  .method public hidebysig static float64
     Calculate(
       int32 value1,
       valuetype IlClasses.CalculatorOperation operation,
@@ -17,9 +12,9 @@
   {
     .maxstack 2
     .locals init (
-      [0] int32 result,
-      [1] int32 V_1,
-      [2] int32 V_2
+      [0] float64 result,
+      [1] float64 V_1,
+      [2] float64 V_2
     )
 
     // [6 9 - 6 10]

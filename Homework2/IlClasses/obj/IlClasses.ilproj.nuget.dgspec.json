@@ -45,10 +45,6 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
-            "System.Runtime": {
-              "target": "Package",
-              "version": "[4.3.1, )"
-            },
             "runtime.win-x64.microsoft.netcore.ilasm": {
               "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

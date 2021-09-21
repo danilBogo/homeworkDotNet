@@ -1,19 +1,12 @@
-﻿// Type: Homework2.Parser 
-// Assembly: Homework2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: B881BA17-47E5-47CB-9637-4E1E602FB9A2
-// Location: S:\GitRepository\homeworkDotNet\Homework2\Homework2\bin\Debug\net5.0\Homework2.dll
-// Sequence point data from S:\GitRepository\homeworkDotNet\Homework2\Homework2\bin\Debug\net5.0\Homework2.pdb
-
-.class public auto ansi beforefieldinit
-  Homework2.Parser
-    extends [System.Runtime]System.Object
+﻿.class public auto ansi beforefieldinit
+  IlClasses.Parser
+    extends System.Object
 {
-
   .method public hidebysig static int32
     ParseCalcArguments(
       string[] args,
       [out] int32& value1,
-      [out] valuetype Homework2.CalculatorOperation& operation,
+      [out] valuetype IlClasses.CalculatorOperation& operation,
       [out] int32& value2
     ) cil managed
   {
@@ -52,7 +45,7 @@
     IL_0016: ldc.i4.1
     IL_0017: ldelem.ref
     IL_0018: ldarg.2      // operation
-    IL_0019: call         bool Homework2.Parser::IsOperationSupported(string, valuetype Homework2.CalculatorOperation&)
+    IL_0019: call         bool IlClasses.Parser::IsOperationSupported(string, valuetype IlClasses.CalculatorOperation&)
     IL_001e: ldc.i4.0
     IL_001f: ceq
     IL_0021: stloc.2      // V_2
@@ -69,7 +62,7 @@
     IL_0029: ldarg.0      // args
     IL_002a: ldlen
     IL_002b: conv.i4
-    IL_002c: call         bool Homework2.Parser::IsArgLengthSupported(int32)
+    IL_002c: call         bool IlClasses.Parser::IsArgLengthSupported(int32)
     IL_0031: ldc.i4.0
     IL_0032: ceq
     IL_0034: stloc.s      V_4
@@ -87,13 +80,13 @@
     IL_003f: ldc.i4.0
     IL_0040: ldelem.ref
     IL_0041: ldloc.0      // isInt1
-    IL_0042: call         bool Homework2.Parser::IsValueInt(string, bool)
+    IL_0042: call         bool IlClasses.Parser::IsValueInt(string, bool)
     IL_0047: brfalse.s    IL_0057
     IL_0049: ldarg.0      // args
     IL_004a: ldc.i4.2
     IL_004b: ldelem.ref
     IL_004c: ldloc.1      // isInt2
-    IL_004d: call         bool Homework2.Parser::IsValueInt(string, bool)
+    IL_004d: call         bool IlClasses.Parser::IsValueInt(string, bool)
     IL_0052: ldc.i4.0
     IL_0053: ceq
     IL_0055: br.s         IL_0058
@@ -172,8 +165,7 @@
     IL_000d: ldstr        "The program requires 3 arguments, but was {0}"
     IL_0012: ldarg.0      // length
     IL_0013: box          [System.Runtime]System.Int32
-    IL_0018: call         string [System.Runtime]System.String::Format(string, object)
-    IL_001d: call         void [System.Console]System.Console::WriteLine(string)
+    IL_0018: call         string System.String::Format(string, object)
     IL_0022: nop
 
     // [25 13 - 25 26]
@@ -190,12 +182,12 @@
   .method private hidebysig static bool
     IsOperationSupported(
       string arg,
-      [out] valuetype Homework2.CalculatorOperation& operation
+      [out] valuetype IlClasses.CalculatorOperation& operation
     ) cil managed
   {
     .maxstack 2
     .locals init (
-      [0] valuetype Homework2.CalculatorOperation V_0,
+      [0] valuetype IlClasses.CalculatorOperation V_0,
       [1] bool V_1
     )
 
@@ -211,19 +203,19 @@
 
     IL_0005: ldarg.0      // arg
     IL_0006: ldstr        "+"
-    IL_000b: call         bool [System.Runtime]System.String::op_Equality(string, string)
+    IL_000b: call         bool System.String::op_Equality(string, string)
     IL_0010: brtrue.s     IL_003b
     IL_0012: ldarg.0      // arg
     IL_0013: ldstr        "-"
-    IL_0018: call         bool [System.Runtime]System.String::op_Equality(string, string)
+    IL_0018: call         bool System.String::op_Equality(string, string)
     IL_001d: brtrue.s     IL_003f
     IL_001f: ldarg.0      // arg
     IL_0020: ldstr        "*"
-    IL_0025: call         bool [System.Runtime]System.String::op_Equality(string, string)
+    IL_0025: call         bool System.String::op_Equality(string, string)
     IL_002a: brtrue.s     IL_0043
     IL_002c: ldarg.0      // arg
     IL_002d: ldstr        "/"
-    IL_0032: call         bool [System.Runtime]System.String::op_Equality(string, string)
+    IL_0032: call         bool System.String::op_Equality(string, string)
     IL_0037: brtrue.s     IL_0047
     IL_0039: br.s         IL_004b
 
@@ -308,8 +300,7 @@
     // [45 13 - 45 59]
     IL_000a: ldstr        "Value is not int: "
     IL_000f: ldarg.0      // arg
-    IL_0010: call         string [System.Runtime]System.String::Concat(string, string)
-    IL_0015: call         void [System.Console]System.Console::WriteLine(string)
+    IL_0010: call         string System.String::Concat(string, string)
     IL_001a: nop
 
     // [46 13 - 46 26]
@@ -329,9 +320,9 @@
     .maxstack 8
 
     IL_0000: ldarg.0      // this
-    IL_0001: call         instance void [System.Runtime]System.Object::.ctor()
+    IL_0001: call         instance void System.Object::.ctor()
     IL_0006: nop
     IL_0007: ret
 
-  } // end of method Parser::.ctor
-} // end of class Homework2.Parser
+  }
+}

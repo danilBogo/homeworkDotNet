@@ -6,11 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.NET.Sdk.IL" Version="5.0.0" />
-      <PackageReference Include="System.Runtime" Version="4.3.1" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\IlClasses\IlClasses.ilproj" />
     </ItemGroup>
 

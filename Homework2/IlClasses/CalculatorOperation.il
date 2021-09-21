@@ -1,9 +1,4 @@
-﻿.assembly IlClasses
-{
-  .ver 1:0:0:0
-}
-
-.class public sealed auto ansi
+﻿.class public sealed auto ansi
   IlClasses.CalculatorOperation
     extends System.Enum
 {

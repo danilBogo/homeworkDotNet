@@ -2,7 +2,14 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <RootNamespace>ClassLibrary1</RootNamespace>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     </PropertyGroup>
-
+	
+	<ItemGroup>
+		<Compile Include="Assembly.il" />
+		<Compile Include="CalculatorOperation.il" />
+		<Compile Include="Parser.il" />
+		<Compile Include="Message.il" />
+		<Compile Include="Calculator.il" />
+	</ItemGroup>
 </Project>

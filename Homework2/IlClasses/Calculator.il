@@ -16,50 +16,48 @@
       [1] float64 V_1,
       [2] float64 V_2
     )
+    
+    ldc.i4.1
+    brtrue.s     goToSwitch
 
-    // [6 9 - 6 10]
-    IL_0000: nop
-
-    // [7 13 - 13 15]
-    IL_0001: ldc.i4.1
-    IL_0002: brtrue.s     IL_0005
-
-    // [7 36 - 13 14]
-    IL_0004: nop
-
-    IL_0005: ldarg.1      // operation
-    IL_0006: switch       (IL_001d, IL_0023, IL_0029, IL_002f)
-    IL_001b: br.s         IL_0035
+    goToSwitch: 
+    ldarg.1      // operation
+    switch       (firstValue, secondValue, thirdValue, fourthValue)
+    br.s         IL_0035
 
     // [9 45 - 9 60]
-    IL_001d: ldarg.0      // value1
-    IL_001e: ldarg.2      // value2
-    IL_001f: add
-    IL_0020: stloc.1      // V_1
-    IL_0021: br.s         IL_0045
+    firstValue: 
+    ldarg.0      // value1
+    ldarg.2      // value2
+    add
+    stloc.1      // V_1
+     br.s         IL_0045
 
     // [10 46 - 10 61]
-    IL_0023: ldarg.0      // value1
-    IL_0024: ldarg.2      // value2
-    IL_0025: sub
-    IL_0026: stloc.1      // V_1
-    IL_0027: br.s         IL_0045
+    secondValue: 
+    ldarg.0      // value1
+    ldarg.2      // value2
+    sub
+    stloc.1      // V_1
+    br.s         IL_0045
 
     // [11 49 - 11 64]
-    IL_0029: ldarg.0      // value1
-    IL_002a: ldarg.2      // value2
-    IL_002b: mul
-    IL_002c: stloc.1      // V_1
-    IL_002d: br.s         IL_0045
+    thirdValue: 
+    ldarg.0      // value1
+    ldarg.2      // value2
+    mul
+    stloc.1      // V_1
+    br.s         IL_0045
 
     // [12 47 - 12 62]
-    IL_002f: ldarg.0      // value1
-    IL_0030: ldarg.2      // value2
-    IL_0031: div
-    IL_0032: stloc.1      // V_1
-    IL_0033: br.s         IL_0045
+    fourthValue: 
+    ldarg.0      // value1
+    ldarg.2      // value2
+    div
+    stloc.1      // V_1
+    br.s         IL_0045
     IL_0035: ldc.i4.1
-    IL_0036: brtrue.s     IL_0039
+    brtrue.s     IL_0039
 
     // [7 36 - 13 14]
     IL_0038: nop

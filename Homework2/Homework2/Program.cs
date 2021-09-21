@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Homework2
 {
@@ -7,7 +6,8 @@ namespace Homework2
     {
         public static int Main(string[] args)
         {
-            Console.WriteLine(ClassLibrary1.Class.Square(10));
+            //Console.WriteLine(IlClasses.Class.Square(10));
+            //Console.WriteLine(IlClasses.CalculatorOperation.Divide);
             //Console.WriteLine("kek");
             //Square(10);
             // var check = Parser.ParseCalcArguments(args, out var val1, out var operation, out var val2);
@@ -17,8 +17,5 @@ namespace Homework2
             // Console.WriteLine($"Result is: {result}");
             return 0;
         }
-        
-        // [MethodImpl(MethodImplOptions.ForwardRef)]
-        // public static extern int Square(int number);
     }
 }

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "nr3s+NVmpPuvboIBtg9nl5Zvdj+Du/zaz7u0A0Log3vHuS2bW48rHbpYaV4819hMreN0tzWijZTt2sZrgDSdlA==",
+  "dgSpecHash": "2yfdlivbRqoHVLZcYET1dc2cyXhTarVGVrG6tMifi5uNt04N3MQUG0ua/uSE361q9LJjlYKuQgQNMNacziIeyA==",
   "success": true,
   "projectFilePath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\danil\\.nuget\\packages\\microsoft.net.sdk.il\\5.0.0\\microsoft.net.sdk.il.5.0.0.nupkg.sha512"
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.net.sdk.il\\5.0.0\\microsoft.net.sdk.il.5.0.0.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512"
   ],
   "logs": []
 }

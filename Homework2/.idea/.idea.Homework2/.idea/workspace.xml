@@ -6,24 +6,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c8d5d32-981e-4a6e-9e01-1271ac0fd15b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/IlClasses/CalculatorOperations.il" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IlClasses/IlClasses.ilproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Homework2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Homework2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/Class1.il" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/ClassLibrary1.ilproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/bin/Debug/netstandard2.0/ClassLibrary1.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/bin/Debug/netstandard2.0/ClassLibrary1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/ClassLibrary1.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/ClassLibrary1.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/ClassLibrary1.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/ClassLibrary1.ilproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/ClassLibrary1.ilproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/ClassLibrary1.ilproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/net5.0/ClassLibrary1.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/net5.0/ClassLibrary1.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/net5.0/ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/net5.0/ClassLibrary1.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/netstandard2.0/ClassLibrary1.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/netstandard2.0/ClassLibrary1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/netstandard2.0/ClassLibrary1.ilproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/netstandard2.0/ClassLibrary1.ilproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/Debug/netstandard2.0/ClassLibrary1.ilproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassLibrary1/obj/rider.project.restore.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/Calculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/Calculator1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/CalculatorOperations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/CalculatorOperations1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/Homework2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/Homework2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/Parser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/Parser1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/ClassLibrary1.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/ref/Homework2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/ref/Homework2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/ref/Homework2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/ref/Homework2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Homework2.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Homework2.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Tests.csproj.nuget.dgspec.json" afterDir="false" />
@@ -38,6 +71,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b1d70a232099400895e7f698a18062e3800/6b/178d6a08/02000002.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/e20f4c7cbf224b87b5b95a372764694c800/93/e7f9b58b/02000002.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/899dc63cf3794b2b92c9cf9265bddc37800/00/eb8d84aa/02000003.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/dd3d95866c6f4a9a8370b41de5901c3b800/72/3bce745e/02000002.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/dd3d95866c6f4a9a8370b41de5901c3b800/5d/e76dae48/02000003.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b1db63ae604d46db8bfa5550f6140e69800/1b/ba0ac3ce/02000003.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IlClasses/CalculatorOperations.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/7b7a6e691991445d881871b08b81cf9d800/e1/b4e16947/02000002.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b1d70a232099400895e7f698a18062e3800/9d/e790dce7/02000003.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/e45fe3f9400d477190ceb7f304a2b716800/d5/2730ccbc/02000003.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/e45fe3f9400d477190ceb7f304a2b716800/66/6c44aee3/02000002.il" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yPXrPFh6FlJH7q1WMyflwdLOEa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -112,6 +158,8 @@
       <workItem from="1632159939035" duration="600000" />
       <workItem from="1632160585244" duration="89000" />
       <workItem from="1632160729590" duration="707000" />
+      <workItem from="1632162134529" duration="4078000" />
+      <workItem from="1632203733157" duration="1598000" />
     </task>
     <servers />
   </component>
@@ -119,7 +167,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="93" />
+    <option name="coveragePercentColumnWidth" value="92" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
     <option name="symbolColumnWidth" value="146" />

@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework2", "Homework2\Home
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{253422ED-65A6-477B-ABCB-A619824495C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.ilproj", "{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IlClasses", "IlClasses\IlClasses.ilproj", "{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

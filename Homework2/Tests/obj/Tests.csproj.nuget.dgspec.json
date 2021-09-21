@@ -4,14 +4,86 @@
     "S:\\GitRepository\\homeworkDotNet\\Homework2\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj": {
+    "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj",
-        "projectName": "ClassLibrary1",
-        "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj",
+        "projectUniqueName": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj",
+        "projectName": "Homework2",
+        "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj",
         "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-        "outputPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\obj\\",
+        "outputPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "S:\\GitRepository\\homeworkDotNet\\Homework2\\IlClasses\\IlClasses.ilproj": {
+                "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\IlClasses\\IlClasses.ilproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Sdk.IL": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\GitRepository\\homeworkDotNet\\Homework2\\IlClasses\\IlClasses.ilproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\GitRepository\\homeworkDotNet\\Homework2\\IlClasses\\IlClasses.ilproj",
+        "projectName": "IlClasses",
+        "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\IlClasses\\IlClasses.ilproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\IlClasses\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet"
@@ -45,6 +117,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
             "runtime.win-x64.microsoft.netcore.ilasm": {
               "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -70,74 +146,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj",
-        "projectName": "Homework2",
-        "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\Homework2.csproj",
-        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-        "outputPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\Homework2\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj": {
-                "projectPath": "S:\\GitRepository\\homeworkDotNet\\Homework2\\ClassLibrary1\\ClassLibrary1.ilproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.NET.Sdk.IL": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }

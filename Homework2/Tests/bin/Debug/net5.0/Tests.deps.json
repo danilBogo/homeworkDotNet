@@ -1091,8 +1091,16 @@
       },
       "xunit.runner.visualstudio/2.4.3": {},
       "Homework2/1.0.0": {
+        "dependencies": {
+          "IlClasses": "1.0.0"
+        },
         "runtime": {
           "Homework2.dll": {}
+        }
+      },
+      "IlClasses/1.0.0": {
+        "runtime": {
+          "IlClasses.dll": {}
         }
       }
     }
@@ -1748,6 +1756,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
     "Homework2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IlClasses/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

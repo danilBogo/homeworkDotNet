@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "Homework2/1.0.0": {
+        "dependencies": {
+          "IlClasses": "1.0.0"
+        },
         "runtime": {
           "Homework2.dll": {}
+        }
+      },
+      "IlClasses/1.0.0": {
+        "runtime": {
+          "IlClasses.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Homework2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IlClasses/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

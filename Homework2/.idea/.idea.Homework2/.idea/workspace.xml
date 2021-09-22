@@ -15,12 +15,23 @@
       <change beforePath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/Debug/net5.0/Homework2.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlClasses/Calculator.il" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/Calculator.il" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlClasses/IlClasses.ilproj" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/IlClasses.ilproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlClasses/Parser.il" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/Parser.il" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlClasses/bin/Debug/netstandard2.0/IlClasses.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/bin/Debug/netstandard2.0/IlClasses.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlClasses/obj/Debug/netstandard2.0/IlClasses.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/obj/Debug/netstandard2.0/IlClasses.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlClasses/obj/Debug/netstandard2.0/IlClasses.ilproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/obj/Debug/netstandard2.0/IlClasses.ilproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlClasses/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IlClasses/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Homework2.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Homework2.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Homework2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Homework2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Homework2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Homework2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Tests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Tests.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/ref/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/net5.0/ref/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/ref/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/net5.0/ref/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,19 +47,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/3516c0c73f2a4c5887738e64b9736ce1e00/78/03239b4e/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/dd3d95866c6f4a9a8370b41de5901c3b800/5d/e76dae48/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/3516c0c73f2a4c5887738e64b9736ce1e00/4c/69d1b462/02000002.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/94/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/94/Int32.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IlClasses/CalculatorOperation.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/13E/NumberFormatInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/e45fe3f9400d477190ceb7f304a2b716800/d5/2730ccbc/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/17e6cf4e20424bf490de5c11d1deb802e00/09/48ea94b4/02000004.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Homework2/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/11C/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/e45fe3f9400d477190ceb7f304a2b716800/66/6c44aee3/02000002.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/17e6cf4e20424bf490de5c11d1deb802e00/ca/1d73c9ae/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/11F/CultureInfo.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7a00c103d3e74ef7ab69358d7904761ec00/5c/2f8dea97/Parser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/899dc63cf3794b2b92c9cf9265bddc37800/00/eb8d84aa/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/dd3d95866c6f4a9a8370b41de5901c3b800/72/3bce745e/02000002.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/118/CultureData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b0b2ff862ea54eb49034403e3fb1d089e00/e1/a8cf74af/02000004.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7a00c103d3e74ef7ab69358d7904761ec00/95/3ca22089/Calculator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/149/TextInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b0b2ff862ea54eb49034403e3fb1d089e00/db/a2b9b9ab/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/7b7a6e691991445d881871b08b81cf9d800/e1/b4e16947/02000002.il" root0="SKIP_HIGHLIGHTING" />
@@ -74,8 +87,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/aed847556efa4b768c869cdd1f4dbb70e00/4f/4c23a068/02000005.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b1d70a232099400895e7f698a18062e3800/6b/178d6a08/02000002.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7eb11bf56ff84674884ca4abe5a4929be00/70/f43c2305/Calculator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IlClasses/CalculatorOperation.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1a9679a571d4600969f665a14c68bc3e00/7c/a04ff871/Calculator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Homework2/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7a3ea64c46c74b33820edb0180386b97e00/5b/f10f3bcc/Calculator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/aed847556efa4b768c869cdd1f4dbb70e00/a6/5bb2d76d/02000004.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bebff8b2b1d449eabed1d20b4265ffa9e00/76/480203f3/CalculatorOperation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,12 +98,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c11013fe278e424e8e09987d6302089ee00/fc/0ebf7f3a/Parser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62a2a234f15c4f44b8e017d155a9b4c7e00/7b/c18402e2/Calculator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/073978657a7f47e886d7324d0af87f3de00/a1/5d2f5523/Calculator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13d269e935f543568c2c5b6d130de273e00/56/71359719/Parser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13d269e935f543568c2c5b6d130de273e00/56/71359719/Parser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/b1db63ae604d46db8bfa5550f6140e69800/1b/ba0ac3ce/02000003.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9810293ff1ac4443a6472eaa949128fae00/f8/78c26d4c/Calculator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/3E/String.Comparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/3E/String.Comparison.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/3516c0c73f2a4c5887738e64b9736ce1e00/37/c8acb017/02000005.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/D5/SpanHelpers.Byte.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/D5/SpanHelpers.Byte.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/3516c0c73f2a4c5887738e64b9736ce1e00/53/d83ff721/02000004.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62b72429a8104026960a9ae3790fc7dee00/bc/eab23b3b/Parser.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -133,7 +146,7 @@
     </configuration>
     <configuration name="Homework2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Homework2/bin/Debug/net5.0/Homework2.exe" />
-      <option name="PROGRAM_PARAMETERS" value="1 * 3" />
+      <option name="PROGRAM_PARAMETERS" value="2 + 2,5" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework2/bin/Debug/net5.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -184,6 +197,8 @@
       <workItem from="1632238687233" duration="193000" />
       <workItem from="1632238919234" duration="18000" />
       <workItem from="1632238976411" duration="1349000" />
+      <workItem from="1632240947274" duration="492000" />
+      <workItem from="1632241644084" duration="83000" />
     </task>
     <servers />
   </component>

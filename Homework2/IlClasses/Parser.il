@@ -144,10 +144,10 @@
       [1] bool V_1
     )
 
-    // [22 9 - 22 10]
+    // [28 9 - 28 10]
     IL_0000: nop
 
-    // [23 13 - 23 29]
+    // [29 13 - 29 29]
     IL_0001: ldarg.0      // length
     IL_0002: ldc.i4.3
     IL_0003: ceq
@@ -156,26 +156,19 @@
     IL_0006: ldloc.0      // V_0
     IL_0007: brfalse.s    IL_000d
 
-    // [23 30 - 23 42]
+    // [29 30 - 29 42]
     IL_0009: ldc.i4.1
     IL_000a: stloc.1      // V_1
-    IL_000b: br.s         IL_0027
+    IL_000b: br.s         IL_0011
 
-    // [24 13 - 24 86]
-    IL_000d: ldstr        "The program requires 3 arguments, but was {0}"
-    IL_0012: ldarg.0      // length
-    IL_0013: box          [System.Runtime]System.Int32
-    IL_0018: call         string System.String::Format(string, object)
-    IL_0022: nop
+    // [30 13 - 30 26]
+    IL_000d: ldc.i4.0
+    IL_000e: stloc.1      // V_1
+    IL_000f: br.s         IL_0011
 
-    // [25 13 - 25 26]
-    IL_0023: ldc.i4.0
-    IL_0024: stloc.1      // V_1
-    IL_0025: br.s         IL_0027
-
-    // [26 9 - 26 10]
-    IL_0027: ldloc.1      // V_1
-    IL_0028: ret
+    // [31 9 - 31 10]
+    IL_0011: ldloc.1      // V_1
+    IL_0012: ret
 
   } // end of method Parser::IsArgLengthSupported
 
@@ -276,41 +269,35 @@
       bool isInt
     ) cil managed
   {
-    .maxstack 2
+    .maxstack 1
     .locals init (
       [0] bool V_0,
       [1] bool V_1
     )
 
-    // [43 9 - 43 10]
+    // [48 9 - 48 10]
     IL_0000: nop
 
-    // [44 13 - 44 23]
+    // [49 13 - 49 23]
     IL_0001: ldarg.1      // isInt
     IL_0002: stloc.0      // V_0
 
     IL_0003: ldloc.0      // V_0
     IL_0004: brfalse.s    IL_000a
 
-    // [44 24 - 44 36]
+    // [49 24 - 49 36]
     IL_0006: ldc.i4.1
     IL_0007: stloc.1      // V_1
-    IL_0008: br.s         IL_001f
+    IL_0008: br.s         IL_000e
 
-    // [45 13 - 45 59]
-    IL_000a: ldstr        "Value is not int: "
-    IL_000f: ldarg.0      // arg
-    IL_0010: call         string System.String::Concat(string, string)
-    IL_001a: nop
+    // [50 13 - 50 26]
+    IL_000a: ldc.i4.0
+    IL_000b: stloc.1      // V_1
+    IL_000c: br.s         IL_000e
 
-    // [46 13 - 46 26]
-    IL_001b: ldc.i4.0
-    IL_001c: stloc.1      // V_1
-    IL_001d: br.s         IL_001f
-
-    // [47 9 - 47 10]
-    IL_001f: ldloc.1      // V_1
-    IL_0020: ret
+    // [51 9 - 51 10]
+    IL_000e: ldloc.1      // V_1
+    IL_000f: ret
 
   } // end of method Parser::IsValueInt
 

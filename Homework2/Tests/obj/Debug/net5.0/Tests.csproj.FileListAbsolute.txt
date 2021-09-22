@@ -105,3 +105,4 @@ S:\GitRepository\homeworkDotNet\Homework2\Tests\obj\Debug\net5.0\Tests.dll
 S:\GitRepository\homeworkDotNet\Homework2\Tests\obj\Debug\net5.0\ref\Tests.dll
 S:\GitRepository\homeworkDotNet\Homework2\Tests\obj\Debug\net5.0\Tests.pdb
 S:\GitRepository\homeworkDotNet\Homework2\Tests\obj\Debug\net5.0\Tests.genruntimeconfig.cache
+S:\GitRepository\homeworkDotNet\Homework2\Tests\bin\Debug\net5.0\IlClasses.dll

@@ -1,6 +1,0 @@
-S:\GitRepository\homeworkDotNet\Homework2\IlClasses\bin\Debug\net5.0\IlClasses.deps.json
-S:\GitRepository\homeworkDotNet\Homework2\IlClasses\bin\Debug\net5.0\IlClasses.dll
-S:\GitRepository\homeworkDotNet\Homework2\IlClasses\bin\Debug\net5.0\ref\IlClasses.dll
-S:\GitRepository\homeworkDotNet\Homework2\IlClasses\obj\Debug\net5.0\IlClasses.ilproj.AssemblyReference.cache
-S:\GitRepository\homeworkDotNet\Homework2\IlClasses\obj\Debug\net5.0\IlClasses.ilproj.CoreCompileInputs.cache
-S:\GitRepository\homeworkDotNet\Homework2\IlClasses\obj\Debug\net5.0\IlClasses.dll

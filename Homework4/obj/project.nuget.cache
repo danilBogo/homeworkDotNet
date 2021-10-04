@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qRbqPQJWBryMA10syKlWpIaXheX/a9TksaZK3/ap4x9xiGPUtN/D1dtxo68LgxmfIdKG0B7NpyrqgNf6s5nUMQ==",
+  "success": true,
+  "projectFilePath": "S:\\GitRepository\\homeworkDotNet\\Homework4\\Homework4.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danil\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -44,6 +44,11 @@
               "target": "Package",
               "version": "[5.0.0, )",
               "generatePathProperty": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2-pre.12, )",
+              "generatePathProperty": true
             }
           },
           "imports": [

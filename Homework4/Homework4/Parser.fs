@@ -4,11 +4,11 @@ open System
 let isArgLengthSupported (args:string[]) = args.Length = 3
 let isOperationSupported (arg:string) (operation: outref<CalculatorOperation>) =
     operation <- match arg with
-    | "+" -> CalculatorOperation.Plus
-    | "-" -> CalculatorOperation.Minus
-    | "*" -> CalculatorOperation.Multiply
-    | "/" -> CalculatorOperation.Divide
-    | _ -> CalculatorOperation.UndefinedOperation
+                 | "+" -> CalculatorOperation.Plus
+                 | "-" -> CalculatorOperation.Minus
+                 | "*" -> CalculatorOperation.Multiply
+                 | "/" -> CalculatorOperation.Divide
+                 | _ -> CalculatorOperation.UndefinedOperation
     operation <> CalculatorOperation.UndefinedOperation
 let parseCalcArguments (args: string[])
                        (value1: outref<int>)

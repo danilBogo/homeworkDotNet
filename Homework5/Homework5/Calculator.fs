@@ -1,11 +1,8 @@
 ﻿module Homework5.Calculator
 
-let calculate value1 operation value2 =
-    let value1d = value1 |> double
-    let value2d = value2 |> double
-    
+let calculate (arg1: decimal, operation: CalculatorOperation, arg2: decimal) =
     match operation with
-    | CalculatorOperation.Plus -> value1d + value2d
-    | CalculatorOperation.Minus -> value1d - value2d
-    | CalculatorOperation.Divide -> value1d / value2d
-    | _ -> value1d  * value2d
+    | CalculatorOperation.Plus -> arg1 + arg2
+    | CalculatorOperation.Minus -> arg1 - arg2
+    | CalculatorOperation.Divide -> arg1 / arg2
+    | _ -> arg1  * arg2

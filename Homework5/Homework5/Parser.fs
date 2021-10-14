@@ -1,29 +1,32 @@
 ﻿module Homework5.Parser
 
 open System
-let isArgLengthSupported (args:string[]) = args.Length = 3
-let isOperationSupported (arg:string) (operation: outref<CalculatorOperation>) =
-    operation <- match arg with
-                 | "+" -> CalculatorOperation.Plus
-                 | "-" -> CalculatorOperation.Minus
-                 | "*" -> CalculatorOperation.Multiply
-                 | "/" -> CalculatorOperation.Divide
-                 | _ -> CalculatorOperation.UndefinedOperation
-    operation <> CalculatorOperation.UndefinedOperation
-let parseCalcArguments (args: string[])
-                       (value1: outref<int>)
-                       (operation: outref<CalculatorOperation>)
-                       (value2: outref<int>) =
-    let isInt1 = Int32.TryParse(args.[0], &value1)
-    let isInt2 = Int32.TryParse(args.[2], &value2)
+open MaybeBuilder
+let isArgLengthSupported (args:string[]) =
+    match args.Length with
+    | 3 -> Ok args
+    | _ -> Error Message.WrongArgLength
+let isOperationSupported (arg1: decimal, operation: string, arg2: decimal) =
+    match operation with
+        | "+" -> Ok (arg1, CalculatorOperation.Plus, arg2)
+        | "-" -> Ok (arg1, CalculatorOperation.Minus, arg2)
+        | "*" -> Ok (arg1, CalculatorOperation.Multiply, arg2)
+        | "/" -> Ok (arg1, CalculatorOperation.Divide, arg2)
+        | _ -> Error Message.WrongArgFormatOperation
+
+let parseArgs (args: string[]) =
+    try Ok (args.[0] |> decimal, args.[1], args.[2] |> decimal)
+    with | _ -> Error Message.WrongArgFormat
     
-    if isOperationSupported args.[1] &operation = false then
-        Message.WrongArgFormatOperation
-    elif isArgLengthSupported args = false then
-        Message.WrongArgLength
-    elif isInt1 = false || isInt2 = false then
-        Message.WrongArgFormat
-    elif operation = CalculatorOperation.Divide && value2 = 0 then
-        Message.DivideByZero
-    else      
-    Message.SuccessfulExecution
+let isDividingByZero (arg1: decimal, operation: CalculatorOperation, arg2: decimal) = 
+    match operation with
+    | CalculatorOperation.Divide when arg2 = Decimal.Zero -> Error Message.DivideByZero
+    | _ -> Ok (arg1, operation, arg2)
+let parseCalcArguments (args: string[]) =
+    maybe {
+        let! checkArgLength = isArgLengthSupported args
+        let! tryParseArgs = parseArgs checkArgLength
+        let! checkOperation = isOperationSupported tryParseArgs
+        let! checkDividingByZero = isDividingByZero checkOperation
+        return checkDividingByZero
+    }

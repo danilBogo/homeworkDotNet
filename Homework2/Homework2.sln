@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework2", "Homework2\Homework2.csproj", "{037AD3A9-15AA-4C1C-B60F-A1C5FCA16EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{253422ED-65A6-477B-ABCB-A619824495C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IlClasses", "IlClasses\IlClasses.ilproj", "{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{037AD3A9-15AA-4C1C-B60F-A1C5FCA16EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037AD3A9-15AA-4C1C-B60F-A1C5FCA16EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037AD3A9-15AA-4C1C-B60F-A1C5FCA16EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037AD3A9-15AA-4C1C-B60F-A1C5FCA16EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253422ED-65A6-477B-ABCB-A619824495C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253422ED-65A6-477B-ABCB-A619824495C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253422ED-65A6-477B-ABCB-A619824495C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253422ED-65A6-477B-ABCB-A619824495C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DC8D39-E5DF-4E18-B2C9-E76AD5D8E066}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

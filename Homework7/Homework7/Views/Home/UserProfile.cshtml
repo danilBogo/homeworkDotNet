@@ -1,0 +1,15 @@
+﻿@model UserProfile
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>User Profile</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel(Model)
+    <div class="form-group" style="margin-top: 10px;">
+        <input type="Submit" text="Submit query">
+    </div>
+}

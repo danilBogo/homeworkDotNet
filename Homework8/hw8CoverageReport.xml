@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Root CoveredStatements="87" TotalStatements="91" CoveragePercent="96" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
+<Root CoveredStatements="73" TotalStatements="73" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
   <FileIndices>
     <File Index="1" Name="S:\GitRepository\homeworkDotNet\Homework8\Tests\BasicTests.cs" ChecksumAlgorithm="SHA256" Checksum="A83E5915DFCE03A61187CA564161322A2CA9955CF0296BB562D82D84E60E1AA3" />
     <File Index="2" Name="C:\Users\danil\.nuget\packages\microsoft.net.test.sdk\16.9.4\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" ChecksumAlgorithm="SHA256" Checksum="D66F12F9433816A8C7DC1B2ACB9E1010F5418F5EEB51E80F1DF57AA1DCAB8D8A" />
@@ -18,8 +18,8 @@
     <File Index="15" Name="S:\GitRepository\homeworkDotNet\Homework8\Homework8\obj\Debug\net5.0\Homework8.AssemblyInfo.cs" ChecksumAlgorithm="SHA256" Checksum="5F10BA6C09C85F68242EFCB6262439F0CC24BB8362A57E01377B44C21DFC2398" />
     <File Index="16" Name="S:\GitRepository\homeworkDotNet\Homework8\Homework8\obj\Debug\net5.0\Homework8.RazorAssemblyInfo.cs" ChecksumAlgorithm="SHA256" Checksum="30A2B35AA41FC8EF9FFBB67FFA380390553C917EDA657899F20C7A433AB62565" />
   </FileIndices>
-  <Assembly Name="Homework8" CoveredStatements="61" TotalStatements="65" CoveragePercent="94">
-    <Namespace Name="Homework8" CoveredStatements="26" TotalStatements="30" CoveragePercent="87">
+  <Assembly Name="Homework8" CoveredStatements="47" TotalStatements="47" CoveragePercent="100">
+    <Namespace Name="Homework8" CoveredStatements="12" TotalStatements="12" CoveragePercent="100">
       <Type Name="Program" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
         <Type Name="&lt;&gt;c" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
           <Method Name="&lt;CreateHostBuilder&gt;b__1_0(Microsoft.AspNetCore.Hosting.IWebHostBuilder):System.Void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
@@ -32,36 +32,12 @@
           <Statement FileIndex="12" Line="20" Column="13" EndLine="21" EndColumn="95" Covered="True" />
         </Method>
       </Type>
-      <Type Name="Startup" CoveredStatements="22" TotalStatements="26" CoveragePercent="85">
-        <Type Name="&lt;&gt;c" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
-          <Method Name="&lt;Configure&gt;b__5_0(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder):System.Void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
-            <Statement FileIndex="13" Line="53" Column="13" EndLine="53" EndColumn="14" Covered="True" />
-            <Statement FileIndex="13" Line="54" Column="17" EndLine="56" EndColumn="72" Covered="True" />
-            <Statement FileIndex="13" Line="57" Column="13" EndLine="57" EndColumn="14" Covered="True" />
-          </Method>
-        </Type>
+      <Type Name="Startup" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
         <Method Name=".ctor(Microsoft.Extensions.Configuration.IConfiguration):System.Void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
           <Statement FileIndex="13" Line="17" Column="9" EndLine="17" EndColumn="53" Covered="True" />
           <Statement FileIndex="13" Line="18" Column="9" EndLine="18" EndColumn="10" Covered="True" />
           <Statement FileIndex="13" Line="19" Column="13" EndLine="19" EndColumn="43" Covered="True" />
           <Statement FileIndex="13" Line="20" Column="9" EndLine="20" EndColumn="10" Covered="True" />
-        </Method>
-        <Method Name="Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment):System.Void" CoveredStatements="11" TotalStatements="15" CoveragePercent="73">
-          <Statement FileIndex="13" Line="33" Column="9" EndLine="33" EndColumn="10" Covered="True" />
-          <Statement FileIndex="13" Line="34" Column="13" EndLine="34" EndColumn="37" Covered="True" />
-          <Statement FileIndex="13" Line="35" Column="13" EndLine="35" EndColumn="14" Covered="True" />
-          <Statement FileIndex="13" Line="36" Column="17" EndLine="36" EndColumn="49" Covered="True" />
-          <Statement FileIndex="13" Line="37" Column="13" EndLine="37" EndColumn="14" Covered="True" />
-          <Statement FileIndex="13" Line="39" Column="13" EndLine="39" EndColumn="14" Covered="False" />
-          <Statement FileIndex="13" Line="40" Column="17" EndLine="40" EndColumn="56" Covered="False" />
-          <Statement FileIndex="13" Line="42" Column="17" EndLine="42" EndColumn="31" Covered="False" />
-          <Statement FileIndex="13" Line="43" Column="13" EndLine="43" EndColumn="14" Covered="False" />
-          <Statement FileIndex="13" Line="45" Column="13" EndLine="45" EndColumn="39" Covered="True" />
-          <Statement FileIndex="13" Line="46" Column="13" EndLine="46" EndColumn="34" Covered="True" />
-          <Statement FileIndex="13" Line="48" Column="13" EndLine="48" EndColumn="30" Covered="True" />
-          <Statement FileIndex="13" Line="50" Column="13" EndLine="50" EndColumn="36" Covered="True" />
-          <Statement FileIndex="13" Line="52" Column="13" EndLine="57" EndColumn="16" Covered="True" />
-          <Statement FileIndex="13" Line="58" Column="9" EndLine="58" EndColumn="10" Covered="True" />
         </Method>
         <Method Name="ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection):System.Void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
           <Statement FileIndex="13" Line="26" Column="9" EndLine="26" EndColumn="10" Covered="True" />

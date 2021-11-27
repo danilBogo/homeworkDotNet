@@ -11,17 +11,17 @@ namespace Homework8.Controllers.Calculator
 
         public string Subtract(double firstValue, double secondValue)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            return (firstValue - secondValue).ToString(CultureInfo.InvariantCulture);
         }
 
         public string Multiply(double firstValue, double secondValue)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            return (firstValue * secondValue).ToString(CultureInfo.InvariantCulture);
         }
 
         public string Divide(double firstValue, double secondValue)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            return (firstValue / secondValue).ToString(CultureInfo.InvariantCulture);
         }
     }
 }

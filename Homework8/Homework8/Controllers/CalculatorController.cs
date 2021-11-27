@@ -14,13 +14,14 @@ namespace Homework8.Controllers
             var isFirstValueDouble = double.TryParse(firstValue, out var value1);
             var isSecondValueDouble = double.TryParse(secondValue, out var value2);
             if (!isFirstValueDouble)
-                return $"{isFirstValueDouble} не является числом";
+                return ExceptionValues.FirstValueIsWrong;
             if (!isSecondValueDouble)
-                return $"{isSecondValueDouble} не является числом";
+                return ExceptionValues.SecondValueIsWrong;
 
             var isOperation = isOperationDefined(operation, out var calculatorOperation);
-            if (!isOperation) return "Допустимы следующие операции: plus, minus, multiply, divide";
-
+            if (!isOperation) return ExceptionValues.OperationIsUndefined;
+            if (calculatorOperation == CalculatorOperation.Divide && value2 == 0)
+                return ExceptionValues.DivideOnZero;
             return calculatorOperation switch
             {
                 CalculatorOperation.Plus => calculator.Add(value1, value2),

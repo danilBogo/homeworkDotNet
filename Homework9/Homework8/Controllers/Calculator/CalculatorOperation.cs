@@ -10,8 +10,7 @@ namespace Homework8.Controllers
         Multiply,
         Divide,
         LeftBracket,
-        RightBracket,
-        UndefinedOperation
+        RightBracket
     }
 
     public static class CalculatorOperationExtensions
@@ -26,9 +25,8 @@ namespace Homework8.Controllers
                 "/" => CalculatorOperation.Divide,
                 "(" => CalculatorOperation.LeftBracket,
                 ")" => CalculatorOperation.RightBracket,
-                _ => CalculatorOperation.UndefinedOperation
             };
-            return operation != CalculatorOperation.UndefinedOperation;
+            return str == "+" || operation != CalculatorOperation.Plus;
         }
 
         public static bool TryConvertToBinaryExpression(this CalculatorOperation operation,

@@ -100,7 +100,7 @@
           <Statement FileIndex="2" Line="142" Column="9" EndLine="142" EndColumn="10" Covered="True" />
         </Method>
       </Type>
-      <Type Name="CalculatorVisitor" CoveredStatements="16" TotalStatements="17" CoveragePercent="94">
+      <Type Name="CalculatorVisitor" CoveredStatements="17" TotalStatements="17" CoveragePercent="100">
         <Type Name="&lt;&gt;c__DisplayClass0_0" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
           <Method Name="&lt;VisitBinary&gt;b__0():System.Linq.Expressions.Expression" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
             <Statement FileIndex="4" Line="12" Column="39" EndLine="12" EndColumn="67" Covered="True" />

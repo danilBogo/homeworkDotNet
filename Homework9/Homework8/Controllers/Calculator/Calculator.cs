@@ -27,22 +27,18 @@ namespace Homework8.Controllers.Calculator
                     expressionsStack.Push(Expression.Constant(numberResult, typeof(double)));
                 else if (CalculatorOperationExtensions.TryParse(element, out var currentOperation))
                 {
-                    if (currentOperation == CalculatorOperation.RightBracket &&
-                        !TryProcessExpressionInBrackets(operationsStack, expressionsStack))
-                        return CustomExceptionMessages.InvalidExpressionInBrackets;
+                    if (currentOperation == CalculatorOperation.RightBracket)
+                        TryProcessExpressionInBrackets(operationsStack, expressionsStack);
                     while (operationsStack.Count > 0 &&
                            currentOperation != CalculatorOperation.LeftBracket &&
                            GetOperationPriority(operationsStack.Peek()) >= GetOperationPriority(currentOperation))
                     {
-                        if (!TryJoinExpressionsToBinaryExpression(expressionsStack, operationsStack.Pop()))
-                            return CustomExceptionMessages.InvalidExpression;
+                        TryJoinExpressionsToBinaryExpression(expressionsStack, operationsStack.Pop());
                     }
 
                     if (currentOperation != CalculatorOperation.RightBracket)
                         operationsStack.Push(currentOperation);
                 }
-                else
-                    return CustomExceptionMessages.UndefinedElement;
             }
 
             if (operationsStack.Count == 0 && expressionsStack.Count == 0)
@@ -55,7 +51,6 @@ namespace Homework8.Controllers.Calculator
 
         private bool IsBracketsPlacementValid(string str)
         {
-            if (String.IsNullOrWhiteSpace(str)) return false;
             var stack = new Stack<char>();
             foreach (var ch in str)
                 if (IsCharBracket(ch))
@@ -78,7 +73,6 @@ namespace Homework8.Controllers.Calculator
 
         private bool TryGetListOperands(string str, ICollection<string> result)
         {
-            if (String.IsNullOrWhiteSpace(str)) return false;
             str = str.Replace(" ", "")
                 .Replace(".", ",")
                 .ToLower();
@@ -116,17 +110,12 @@ namespace Homework8.Controllers.Calculator
                 char.IsDigit(chr) || chr is '+' or '-' or '*' or '/' or '(' or ')' or ',';
         }
 
-        private bool TryProcessExpressionInBrackets(Stack<CalculatorOperation> operationsStack,
+        private void TryProcessExpressionInBrackets(Stack<CalculatorOperation> operationsStack,
             Stack<Expression> expressionsStack)
         {
             CalculatorOperation currentOperation;
             while ((currentOperation = operationsStack.Pop()) != CalculatorOperation.LeftBracket)
-            {
-                if (!TryJoinExpressionsToBinaryExpression(expressionsStack, currentOperation))
-                    return false;
-            }
-
-            return true;
+                TryJoinExpressionsToBinaryExpression(expressionsStack, currentOperation);
         }
 
         private bool TryJoinExpressionsToBinaryExpression(Stack<Expression> expressionsStack,
@@ -135,10 +124,9 @@ namespace Homework8.Controllers.Calculator
             if (expressionsStack.Count < 2) return false;
             var rightValue = expressionsStack.Pop();
             var leftValue = expressionsStack.Pop();
-            var result = operation.TryConvertToBinaryExpression(leftValue, rightValue, out var expression);
-            if (result)
-                expressionsStack.Push(expression);
-            return result;
+            operation.ConvertToBinaryExpression(leftValue, rightValue, out var expression);
+            expressionsStack.Push(expression);
+            return true;
         }
 
         private int GetOperationPriority(CalculatorOperation operation)

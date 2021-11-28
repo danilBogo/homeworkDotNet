@@ -21,7 +21,6 @@ namespace Homework8.Controllers.Calculator
                 ExpressionType.Subtract   => leftResult - rightResult,
                 ExpressionType.Multiply   => leftResult * rightResult,
                 ExpressionType.Divide     => leftResult / rightResult,
-                _                         => throw new ArgumentException()
             };
             return Expression.Constant(result, typeof(double));
         }

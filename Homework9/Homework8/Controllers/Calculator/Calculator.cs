@@ -1,27 +1,158 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Linq.Expressions;
+using Microsoft.AspNetCore.Components;
 
 namespace Homework8.Controllers.Calculator
 {
     public class Calculator : ICalculator
     {
-        public string Add(double firstValue, double secondValue)
+        public Expression ParseStringToExpression(string str)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            if (String.IsNullOrWhiteSpace(str)) return CustomExceptionMessages.EmptyString;
+            if (!IsBracketsPlacementValid(str))
+                return CustomExceptionMessages.InvalidBracketsPlacement;
+            var listElements = new List<string>();
+            if (!TryGetListOperands(str, listElements))
+                return CustomExceptionMessages.InvalidOperand;
+
+            var expressionsStack = new Stack<Expression>();
+            var operationsStack = new Stack<CalculatorOperation>();
+            foreach (var element in listElements)
+            {
+                if (double.TryParse(element, out var numberResult))
+                    expressionsStack.Push(Expression.Constant(numberResult, typeof(double)));
+                else if (CalculatorOperationExtensions.TryParse(element, out var currentOperation))
+                {
+                    if (currentOperation == CalculatorOperation.RightBracket &&
+                        !TryProcessExpressionInBrackets(operationsStack, expressionsStack))
+                        return CustomExceptionMessages.InvalidExpressionInBrackets;
+                    while (operationsStack.Count > 0 &&
+                           currentOperation != CalculatorOperation.LeftBracket &&
+                           GetOperationPriority(operationsStack.Peek()) >= GetOperationPriority(currentOperation))
+                    {
+                        if (!TryJoinExpressionsToBinaryExpression(expressionsStack, operationsStack.Pop()))
+                            return CustomExceptionMessages.InvalidExpression;
+                    }
+
+                    if (currentOperation != CalculatorOperation.RightBracket)
+                        operationsStack.Push(currentOperation);
+                }
+                else
+                    return CustomExceptionMessages.UndefinedElement;
+            }
+
+            if (operationsStack.Count == 0 && expressionsStack.Count == 0)
+                return CustomExceptionMessages.InvalidExpression;
+            return operationsStack.Any(operation =>
+                !TryJoinExpressionsToBinaryExpression(expressionsStack, operation))
+                ? CustomExceptionMessages.InvalidExpression
+                : expressionsStack.Pop();
         }
 
-        public string Subtract(double firstValue, double secondValue)
+        private bool IsBracketsPlacementValid(string str)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            if (String.IsNullOrWhiteSpace(str)) return false;
+            var stack = new Stack<char>();
+            foreach (var ch in str)
+                if (IsCharBracket(ch))
+                    ProcessCurrentBracket(ch, stack);
+            return stack.Count == 0;
         }
 
-        public string Multiply(double firstValue, double secondValue)
+        private static bool IsCharBracket(char ch) => ch is '(' or ')';
+
+        private static bool IsFirstBracketOpenAndSecondClose(char firstBracket, char secondBracket) =>
+            firstBracket == '(' && secondBracket == ')';
+
+        private static void ProcessCurrentBracket(char bracket, Stack<char> stack)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            if (stack.Count > 0 && IsFirstBracketOpenAndSecondClose(stack.Peek(), bracket))
+                stack.Pop();
+            else
+                stack.Push(bracket);
         }
 
-        public string Divide(double firstValue, double secondValue)
+        private bool TryGetListOperands(string str, ICollection<string> result)
         {
-            return (firstValue + secondValue).ToString(CultureInfo.InvariantCulture);
+            if (String.IsNullOrWhiteSpace(str)) return false;
+            str = str.Replace(" ", "")
+                .Replace(".", ",")
+                .ToLower();
+
+            var indexOfBeginningNumber = int.MinValue;
+            for (var i = 0; i < str.Length; i++)
+            {
+                var currentChar = str[i];
+                if (!IsCharSupported(currentChar)) return false;
+                if (char.IsDigit(currentChar) ||
+                    currentChar == ',' ||
+                    currentChar == '-' && CanNumberBeNegative(str, i))
+                {
+                    if (indexOfBeginningNumber == int.MinValue) indexOfBeginningNumber = i;
+                    continue;
+                }
+
+                if (indexOfBeginningNumber != int.MinValue)
+                {
+                    result.Add(str[indexOfBeginningNumber..i]);
+                    indexOfBeginningNumber = int.MinValue;
+                }
+
+                result.Add(currentChar.ToString());
+            }
+
+            if (indexOfBeginningNumber != int.MinValue)
+                result.Add(str[indexOfBeginningNumber..]);
+
+            return true;
+
+            bool CanNumberBeNegative(string str, int i) => i == 0 || str[i - 1] == '(';
+
+            bool IsCharSupported(char chr) =>
+                char.IsDigit(chr) || chr is '+' or '-' or '*' or '/' or '(' or ')' or ',';
+        }
+
+        private bool TryProcessExpressionInBrackets(Stack<CalculatorOperation> operationsStack,
+            Stack<Expression> expressionsStack)
+        {
+            CalculatorOperation currentOperation;
+            while ((currentOperation = operationsStack.Pop()) != CalculatorOperation.LeftBracket)
+            {
+                if (!TryJoinExpressionsToBinaryExpression(expressionsStack, currentOperation))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private bool TryJoinExpressionsToBinaryExpression(Stack<Expression> expressionsStack,
+            CalculatorOperation operation)
+        {
+            if (expressionsStack.Count < 2) return false;
+            var rightValue = expressionsStack.Pop();
+            var leftValue = expressionsStack.Pop();
+            var result = operation.TryConvertToBinaryExpression(leftValue, rightValue, out var expression);
+            if (result)
+                expressionsStack.Push(expression);
+            return result;
+        }
+
+        private int GetOperationPriority(CalculatorOperation operation)
+        {
+            var result = operation switch
+            {
+                CalculatorOperation.LeftBracket => 0,
+                CalculatorOperation.RightBracket => 0,
+                CalculatorOperation.Plus => 1,
+                CalculatorOperation.Minus => 1,
+                CalculatorOperation.Multiply => 2,
+                CalculatorOperation.Divide => 2
+            };
+            return result;
         }
     }
 }

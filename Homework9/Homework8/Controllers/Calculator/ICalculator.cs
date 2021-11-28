@@ -1,10 +1,9 @@
-﻿namespace Homework8.Controllers.Calculator
+﻿using System.Linq.Expressions;
+
+namespace Homework8.Controllers.Calculator
 {
     public interface ICalculator
     {
-        string Add(double firstValue, double secondValue);
-        string Subtract(double firstValue, double secondValue);
-        string Multiply(double firstValue, double secondValue);
-        string Divide(double firstValue, double secondValue);
+        Expression ParseStringToExpression(string str);
     }
 }

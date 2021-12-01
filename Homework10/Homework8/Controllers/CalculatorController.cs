@@ -15,8 +15,8 @@ namespace Homework8.Controllers
             string str)
         {
             var expression = calculator.ParseStringToExpression(str);
-            var result = new CalculatorVisitor().Visit(expression);
-            return View(new CalculatorModel(result.ToString()));
+            var result = calculator.GetExpressionResult(expression);
+            return View(new CalculatorModel(result));
         }
     }
 }

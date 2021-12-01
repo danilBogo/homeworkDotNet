@@ -101,5 +101,29 @@ namespace Tests
             Assert.True(watch.ElapsedMilliseconds - 2000 < 500);
             Assert.Contains(expectedResult, responseString);
         }
+        
+        [Theory]
+        [InlineData("(2+3 + 7) / 12 * 7 + 8 * 9", "79")]
+        public async Task CacheTest(string expression, string expectedResult)
+        {
+            var firstTime = GetRequestTime(expression, expectedResult).Result;
+            var secondTime = GetRequestTime(expression, expectedResult).Result;
+            Assert.True(firstTime - secondTime > 1000);
+        }
+
+        private async Task<long> GetRequestTime(string expression, string expectedResult)
+        {
+            var watch = new Stopwatch();
+            var client = _factory.CreateClient();
+            var postRequest = new HttpRequestMessage(HttpMethod.Post, "/Calculator/Calculate");
+            var formModel = new Dictionary<string, string> {{"str", expression}};
+            postRequest.Content = new FormUrlEncodedContent(formModel);
+            watch.Start();
+            var response = await client.SendAsync(postRequest);
+            watch.Stop();
+            var responseString = await response.Content.ReadAsStringAsync();
+            Assert.Contains(expectedResult, responseString);
+            return watch.ElapsedMilliseconds;
+        }
     }
 }

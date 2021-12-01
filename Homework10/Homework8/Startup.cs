@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Homework8.Controllers.Calculator;
+using Homework8.Services.Calculator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebApplication;
 
 namespace Homework8
 {
@@ -24,8 +27,12 @@ namespace Homework8
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<ExpressionCacheService>();
             services.AddControllersWithViews();
-            services.AddTransient<ICalculator, Calculator>();
+            services.AddTransient<ICalculator>(provider => new CacheCalculatorDecorator(new Calculator(),
+                provider.GetRequiredService<ExpressionCacheService>()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -49,6 +49,9 @@ namespace Homework8.Controllers.Calculator
                 : expressionsStack.Pop();
         }
 
+        public string GetExpressionResult(Expression expression) =>
+            new CalculatorVisitor().Visit(expression).ToString();
+
         private bool IsBracketsPlacementValid(string str)
         {
             var stack = new Stack<char>();

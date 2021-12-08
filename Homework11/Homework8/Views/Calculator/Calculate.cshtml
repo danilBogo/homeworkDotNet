@@ -1,0 +1,16 @@
+﻿@model CalculatorModel
+
+@{
+    ViewBag.Title = "Calculator";
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <h1>Калькулятор</h1>
+    <form method="post" asp-action="Calculate">
+        <label for="calculator">Введите выражение</label>
+        <input type="text" id="calculator" name="str">
+        <button type="submit">Вычислить</button>
+    </form>
+    <h2>@Model?.Result</h2>
+</div>

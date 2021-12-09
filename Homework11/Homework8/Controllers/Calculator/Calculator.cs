@@ -10,6 +10,10 @@ namespace Homework8.Controllers.Calculator
 {
     public class Calculator : ICalculator
     {
+        private readonly IExpressionVisitor visitor;
+
+        public Calculator(IExpressionVisitor visitor) => this.visitor = visitor;
+        
         public Expression ParseStringToExpression(string str)
         {
             if (String.IsNullOrWhiteSpace(str)) return CustomExceptionMessages.EmptyString;
@@ -50,7 +54,8 @@ namespace Homework8.Controllers.Calculator
         }
 
         public string GetExpressionResult(Expression expression) =>
-            new CalculatorVisitor().Visit(expression).ToString();
+            visitor.Visit(expression).ToString();
+            //new CalculatorVisitor().Visit(expression).ToString();
 
         private bool IsBracketsPlacementValid(string str)
         {

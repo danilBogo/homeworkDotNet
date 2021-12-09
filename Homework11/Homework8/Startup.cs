@@ -31,7 +31,8 @@ namespace Homework8
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ExpressionCacheService>();
             services.AddControllersWithViews();
-            services.AddTransient<ICalculator>(provider => new CacheCalculatorDecorator(new Calculator(),
+            services.AddTransient<ICalculator>(provider => new CacheCalculatorDecorator(
+                new Calculator(new CalculatorVisitor()),
                 provider.GetRequiredService<ExpressionCacheService>()));
         }
 

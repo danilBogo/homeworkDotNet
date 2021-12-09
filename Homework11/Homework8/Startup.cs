@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Homework8.Controllers.Calculator;
 using Homework8.Services.Calculator;
+using Homework8.Services.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,7 @@ namespace Homework8
         {
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IExceptionHandler, ExceptionHandler>();
             services.AddTransient<ExpressionCacheService>();
             services.AddControllersWithViews();
             services.AddTransient<ICalculator>(provider => new CacheCalculatorDecorator(

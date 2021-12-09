@@ -12,7 +12,7 @@ using Xunit;
 
 namespace Tests
 {
-    public class TestDataGenerator : IEnumerable<object[]>
+    public class TestDataGeneratorWithoutException : IEnumerable<object[]>
     {
         private readonly List<object[]> list = new()
         {
@@ -43,9 +43,19 @@ namespace Tests
             new object[] {"1.1/(-1.1)", "-1"},
             new object[] {"0/1.1", "0"},
             new object[] {"2/0.5", "4"},
+            new object[] {"-1.1/0", "-&#x221E;"}
+        };
 
-            new object[] {"-1.1/0", "-&#x221E;"},
-            new object[] {"-1.1/a", CustomExceptionMessages.InvalidOperand.ToString().Replace("\"", "&quot;")},
+        public IEnumerator<object[]> GetEnumerator() => list.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+    
+    public class TestDataGeneratorWithException : IEnumerable<object[]>
+    {
+        private readonly List<object[]> list = new()
+        {
+            new object[] {"-1.1/a", new ArgumentNullException()},
             new object[] {"a/(-1.1)", CustomExceptionMessages.InvalidOperand.ToString().Replace("\"", "&quot;")},
             new object[] {"0aboba1.1", CustomExceptionMessages.InvalidOperand.ToString().Replace("\"", "&quot;")},
             new object[] {"()", CustomExceptionMessages.InvalidExpression.ToString().Replace("\"", "&quot;")},
@@ -55,7 +65,7 @@ namespace Tests
             new object[] {"+", CustomExceptionMessages.InvalidExpression.ToString().Replace("\"", "&quot;")},
             new object[] {"(323+24", CustomExceptionMessages.InvalidBracketsPlacement.ToString().Replace("\"", "&quot;")},
             new object[] {"323+24)", CustomExceptionMessages.InvalidBracketsPlacement.ToString().Replace("\"", "&quot;")},
-            new object[] {"", CustomExceptionMessages.EmptyString.ToString().Replace("\"", "&quot;")}
+            new object[] {"", new ArgumentNullException()}
         };
 
         public IEnumerator<object[]> GetEnumerator() => list.GetEnumerator();
@@ -73,8 +83,21 @@ namespace Tests
         }
 
         [Theory]
-        [ClassData(typeof(TestDataGenerator))]
+        [ClassData(typeof(TestDataGeneratorWithoutException))]
         public async Task Test(string expression, string expectedResult)
+        {
+            var client = _factory.CreateClient();
+            var postRequest = new HttpRequestMessage(HttpMethod.Post, "/Calculator/Calculate");
+            var formModel = new Dictionary<string, string> {{"str", expression}};
+            postRequest.Content = new FormUrlEncodedContent(formModel);
+            var response = await client.SendAsync(postRequest);
+            var responseString = await response.Content.ReadAsStringAsync();
+            Assert.Contains(expectedResult, responseString);
+        }
+        
+        [Theory]
+        [ClassData(typeof(TestDataGeneratorWithException))]
+        public async Task TestExceptions(string expression, string expectedResult)
         {
             var client = _factory.CreateClient();
             var postRequest = new HttpRequestMessage(HttpMethod.Post, "/Calculator/Calculate");

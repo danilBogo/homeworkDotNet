@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
@@ -16,13 +17,16 @@ namespace Homework8.Controllers.Calculator
         
         public Expression ParseStringToExpression(string str)
         {
-            if (String.IsNullOrWhiteSpace(str)) return CustomExceptionMessages.EmptyString;
+            if (String.IsNullOrWhiteSpace(str))
+                throw new ArgumentNullException($"{str} is null");
             if (!IsBracketsPlacementValid(str))
-                return CustomExceptionMessages.InvalidBracketsPlacement;
+                throw new ArgumentException($"{str} has invalid brackets placement");
             var listElements = new List<string>();
             if (!TryGetListOperands(str, listElements))
-                return CustomExceptionMessages.InvalidOperand;
-
+                throw new ArgumentException($"invalid operands");
+            
+            TryGetListOperands(str, listElements);
+            
             var expressionsStack = new Stack<Expression>();
             var operationsStack = new Stack<CalculatorOperation>();
             foreach (var element in listElements)
@@ -46,16 +50,15 @@ namespace Homework8.Controllers.Calculator
             }
 
             if (operationsStack.Count == 0 && expressionsStack.Count == 0)
-                return CustomExceptionMessages.InvalidExpression;
+                throw new InvalidExpressionException();
             return operationsStack.Any(operation =>
                 !TryJoinExpressionsToBinaryExpression(expressionsStack, operation))
-                ? CustomExceptionMessages.InvalidExpression
+                ? throw new InvalidExpressionException()
                 : expressionsStack.Pop();
         }
 
         public string GetExpressionResult(Expression expression) =>
             visitor.Visit(expression).ToString();
-            //new CalculatorVisitor().Visit(expression).ToString();
 
         private bool IsBracketsPlacementValid(string str)
         {

@@ -42,7 +42,9 @@ namespace Tests
             new object[] {"0/1.1", "0"},
             new object[] {"2/0.5", "4"},
             new object[] {"-1.1/0", "-&#x221E;"},
-            new object[] {"-2", "-2"}
+            new object[] {"-2", "-2"},
+            new object[] {"(1*2)-(2*2)", "-2"},
+            new object[] {"(2+2*2)/(2+2*2)*8", "8"}
         };
 
         public IEnumerator<object[]> GetEnumerator() => list.GetEnumerator();

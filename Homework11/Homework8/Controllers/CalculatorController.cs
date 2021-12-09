@@ -29,7 +29,7 @@ namespace Homework8.Controllers
             catch (Exception exception)
             {
                 exceptionHandler.Handle(exception);
-                return View(new CalculatorModel(exception.Message));
+                return View(new CalculatorModel("something went wrong"));
             }
         }
     }

@@ -7,12 +7,12 @@ namespace Homework8.Controllers.Calculator
 {
     public class CalculatorVisitor : IExpressionVisitor
     {
-        public Expression Visit(Expression expression) => Visit((dynamic) expression);
+        public async Task<Expression> VisitAsync(Expression expression) => VisitAsync((dynamic) expression);
 
-        public Expression Visit(BinaryExpression expression)
+        public async Task<Expression> VisitAsync(BinaryExpression expression)
         {
-            var left = Task.Run(() => Visit(expression.Left));
-            var right = Task.Run(() => Visit(expression.Right));
+            var left = VisitAsync(expression.Left);
+            var right = VisitAsync(expression.Right);
             Thread.Sleep(1000);
             Task.WhenAll(left, right);
             var leftResult = (left.Result as ConstantExpression)?.Value as double?;
@@ -27,6 +27,6 @@ namespace Homework8.Controllers.Calculator
             return Expression.Constant(result, typeof(double));
         }
 
-        public Expression Visit(ConstantExpression expression) => expression;
+        public async Task<Expression> VisitAsync(ConstantExpression expression) => expression;
     }
 }

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -50,7 +49,7 @@ namespace Tests
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
-    
+
     public class TestDataGeneratorError : IEnumerable<object[]>
     {
         private readonly List<object[]> list = new()
@@ -94,7 +93,7 @@ namespace Tests
             var responseString = await response.Content.ReadAsStringAsync();
             Assert.Contains(expectedResult, responseString);
         }
-        
+
         [Theory]
         [InlineData("(2+3) / 12 * 7 + 8 * 9", "74,91666666666667")]
         public async Task ParallelTest(string expression, string expectedResult)
@@ -111,15 +110,35 @@ namespace Tests
             Assert.True(watch.ElapsedMilliseconds - 2000 < 500);
             Assert.Contains(expectedResult, responseString);
         }
-        
-        [Theory]
-        [InlineData("(2+3 + 7) / 12 * 7 + 8 * 9", "79")]
-        public async Task CacheTest(string expression, string expectedResult)
+
+        [Fact]
+        public async Task CacheTest()
         {
+            var tuple = GenerateRandomExpressionWithResult();
+            var expression = tuple.Item1;
+            var expectedResult = tuple.Item2;
             var firstTime = GetRequestTime(expression, expectedResult).Result;
             var secondTime = GetRequestTime(expression, expectedResult).Result;
             Assert.True(firstTime - secondTime > 1000);
         }
+
+        private static Tuple<string, string> GenerateRandomExpressionWithResult()
+        {
+            var rnd = new Random();
+            var list = new List<int>();
+            for (var i = 0; i < 7; i++)
+                list.Add(rnd.Next(100));
+            var expression = $"({list[0]} + {list[1]} + {list[2]}) * {list[3]} * {list[4]} + {list[5]} * {list[6]}";
+            var result = GetResult(list);
+            return Tuple.Create(expression, result);
+        }
+
+        private static string GetResult(List<int> list)
+        {
+            var result = (list[0] + list[1] + list[2]) * list[3] * list[4] + list[5] * list[6];
+            return result.ToString();
+        }
+
 
         private async Task<long> GetRequestTime(string expression, string expectedResult)
         {

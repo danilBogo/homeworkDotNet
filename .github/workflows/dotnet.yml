@@ -19,14 +19,14 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: Homework10/Homework8
+      working-directory: Homework11/Homework8
     - name: Build
       run: dotnet build --no-restore
-      working-directory: Homework10/Homework8
+      working-directory: Homework11/Homework8
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: Homework10/Tests
+      working-directory: Homework11/Tests
     - name: Codecov
       uses: codecov/codecov-action@v2.1.0
       with:
-        file: "Homework10/hw10CoverageReport.xml"
+        file: "Homework11/hw11CoverageReport.xml"

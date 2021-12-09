@@ -25,8 +25,6 @@ namespace Homework8.Controllers.Calculator
             if (!TryGetListOperands(str, listElements))
                 throw new ArgumentException($"invalid operands");
             
-            TryGetListOperands(str, listElements);
-            
             var expressionsStack = new Stack<Expression>();
             var operationsStack = new Stack<CalculatorOperation>();
             foreach (var element in listElements)

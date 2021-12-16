@@ -1,4 +1,6 @@
 ﻿using System;
+using BenchmarkDotNet.Running;
+using hw11;
 
 namespace Homework12
 {
@@ -6,7 +8,7 @@ namespace Homework12
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BenchmarkRunner.Run<BenchmarkTests>();
         }
     }
 }

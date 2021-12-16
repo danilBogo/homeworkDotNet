@@ -31,7 +31,9 @@ namespace Homework8
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ExpressionCacheService>();
             services.AddControllersWithViews();
-            services.AddTransient<ICalculator, Calculator>();
+            services.AddTransient<ICalculator>(provider => new CacheCalculatorDecorator(new Calculator(),
+                provider.GetRequiredService<ExpressionCacheService>()));
+            services.AddMiniProfiler();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +50,7 @@ namespace Homework8
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseMiniProfiler();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

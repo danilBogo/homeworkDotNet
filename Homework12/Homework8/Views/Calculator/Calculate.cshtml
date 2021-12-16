@@ -1,4 +1,5 @@
-﻿@model CalculatorModel
+﻿@using StackExchange.Profiling
+@model CalculatorModel
 
 @{
     ViewBag.Title = "Calculator";
@@ -13,4 +14,5 @@
         <button type="submit">Вычислить</button>
     </form>
     <h2>@Model?.Result</h2>
+    <mini-profiler position="RenderPosition.Right"/>
 </div>

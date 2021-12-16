@@ -7,10 +7,10 @@ namespace Homework8.Controllers
 {
     public class CalculatorController : Controller
     {
-        [HttpGet]
-        public IActionResult Calculate() => View();
-        
-        [HttpPost]
+        // [HttpGet]
+        // public IActionResult Calculate() => View();
+        //
+        // // [HttpPost]
         public IActionResult Calculate([FromServices] ICalculator calculator,
             string str)
         {

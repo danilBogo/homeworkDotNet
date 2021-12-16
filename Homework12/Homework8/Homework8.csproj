@@ -5,33 +5,37 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.13" />
       <PackageReference Include="MiniProfiler" Version="4.2.22" />
       <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
-      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Database" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="obj\**" />
+      <Compile Remove="Database\**" />
+      <Compile Remove="Migrations\**" />
+      <Compile Remove="Services\Calculator\CacheCalculatorDecorator.cs" />
+      <Compile Remove="Services\Calculator\ExpressionCacheService.cs" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="obj\**" />
+      <EmbeddedResource Remove="Database\**" />
+      <EmbeddedResource Remove="Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="obj\**" />
+      <None Remove="Database\**" />
+      <None Remove="Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Remove="obj\**" />
+      <Content Remove="Database\**" />
+      <Content Remove="Migrations\**" />
     </ItemGroup>
 
 </Project>

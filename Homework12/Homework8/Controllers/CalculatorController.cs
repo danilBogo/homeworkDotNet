@@ -11,8 +11,7 @@ namespace Homework8.Controllers
         // public IActionResult Calculate() => View();
         //
         // // [HttpPost]
-        public IActionResult Calculate([FromServices] ICalculator calculator,
-            string str)
+        public IActionResult Calculate([FromServices] ICalculator calculator, string str)
         {
             var expression = calculator.ParseStringToExpression(str);
             var result = calculator.GetExpressionResult(expression);

@@ -11,7 +11,6 @@ namespace Homework8.Controllers.Calculator
         {
             var left = Task.Run(() => Visit(binaryExpression.Left));
             var right = Task.Run(() => Visit(binaryExpression.Right));
-            Thread.Sleep(1000);
             Task.WhenAll(left, right);
             var leftResult = (left.Result as ConstantExpression)?.Value as double?;
             var rightResult = (right.Result as ConstantExpression)?.Value as double?;

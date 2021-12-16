@@ -1,4 +1,4 @@
-﻿namespace Homework4
+﻿namespace Homework6
 
 type CalculatorOperation =
      | Plus = 0

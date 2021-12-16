@@ -2,38 +2,34 @@
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 
-namespace hw11
+namespace Homework12
 {
-    [MinColumn]
-    [MaxColumn]
     [StdDevColumn]
     [StdErrorColumn]
     [MedianColumn]
+    [MinColumn]
+    [MaxColumn]
     public class BenchmarkTests
     {
-        private HttpClient _clientCSharp;
-        private HttpClient _clientFSharp;
+        private readonly string FUrl = "http://localhost:5000/calculate";
+        private readonly string CUrl = "https://localhost:5001/Calculator/Calculate";
         
-        private const string FSharpUrl = "http://localhost:5000/calculate";
-        private const string CSharpUrl = "https://localhost:5001/Calculator/Calculate";
+        private HttpClient clientC;
+        private HttpClient clientF;
 
         [GlobalSetup]
         public void GlobalSetUp()
         {
-            _clientCSharp = new HostBuilderCSharp().CreateClient();
-            _clientFSharp = new HostBuilderFSharp().CreateClient();
+            clientC = new HostBuilderC().CreateClient();
+            clientF = new HostBuilderF().CreateClient();
         }
 
         [Benchmark(Description = "F# all")]
-        public async Task FullFSharp() 
-            => await _clientFSharp.GetAsync(FSharpUrl + "?v1=5&operation=plus&v2=5");
+        public async Task FullFSharp()
+            => await clientF.GetAsync(FUrl + "?value1=10&operation=plus&value2=20");
         
         [Benchmark(Description = "C# all")]
         public async Task FullCSharp() 
-            => await _clientCSharp.GetAsync(CSharpUrl + "?firstValue=5&operation=plus&secondValue=5");
-
-        [Benchmark(Description = "C# TryParseEnum")]
-        public void CSharp_TryParseEnum() 
-            => hw7.Controllers.Calculator.CalculatorController.TryParseEnum<CalculatorOperation>("PLUS", out _);
+            => await clientC.GetAsync(CUrl + "?firstValue=5&operation=plus&secondValue=5");
     }
 }

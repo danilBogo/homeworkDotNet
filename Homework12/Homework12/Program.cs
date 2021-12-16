@@ -1,6 +1,4 @@
-﻿using System;
-using BenchmarkDotNet.Running;
-using hw11;
+﻿using BenchmarkDotNet.Running;
 
 namespace Homework12
 {

@@ -7,6 +7,14 @@
 
     <ItemGroup>
       <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Homework6\Homework6.fsproj" />
+      <ProjectReference Include="..\Homework8\Homework8.csproj" />
     </ItemGroup>
 
 </Project>

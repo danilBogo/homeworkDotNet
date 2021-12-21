@@ -7,16 +7,17 @@ namespace Homework8.Controllers.Calculator
 {
     public class CalculatorVisitor : IExpressionVisitor
     {
-        public async Task<Expression> VisitAsync(Expression expression) => VisitAsync((dynamic) expression);
-
+        public async Task<Expression> VisitAsync(Expression expression) => await VisitAsync((dynamic) expression);
+    
         public async Task<Expression> VisitAsync(BinaryExpression expression)
         {
+            await Task.Delay(1000);
             var left = VisitAsync(expression.Left);
             var right = VisitAsync(expression.Right);
-            Thread.Sleep(1000);
-            Task.WhenAll(left, right);
+            await Task.WhenAll(left, right);
             var leftResult = (left.Result as ConstantExpression)?.Value as double?;
             var rightResult = (right.Result as ConstantExpression)?.Value as double?;
+            
             var result = expression.NodeType switch
             {
                 ExpressionType.Add        => leftResult + rightResult,

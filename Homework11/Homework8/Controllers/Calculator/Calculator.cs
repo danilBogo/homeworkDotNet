@@ -56,7 +56,7 @@ namespace Homework8.Controllers.Calculator
         }
 
         public string GetExpressionResult(Expression expression) =>
-            visitor.VisitAsync(expression).ToString();
+            visitor.VisitAsync(expression).Result.ToString();
 
         private bool IsBracketsPlacementValid(string str)
         {

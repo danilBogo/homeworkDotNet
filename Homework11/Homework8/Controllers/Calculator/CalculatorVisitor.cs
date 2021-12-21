@@ -14,9 +14,8 @@ namespace Homework8.Controllers.Calculator
             await Task.Delay(1000);
             var left = VisitAsync(expression.Left);
             var right = VisitAsync(expression.Right);
-            await Task.WhenAll(left, right);
-            var leftResult = (left.Result as ConstantExpression)?.Value as double?;
-            var rightResult = (right.Result as ConstantExpression)?.Value as double?;
+            var leftResult = (await left as ConstantExpression)?.Value as double?;
+            var rightResult = (await right as ConstantExpression)?.Value as double?;
             
             var result = expression.NodeType switch
             {

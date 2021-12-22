@@ -26,7 +26,3 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: Homework11/Tests
-    - name: Codecov
-      uses: codecov/codecov-action@v2.1.0
-      with:
-        file: "Homework11/hw11CoverageReport.xml"

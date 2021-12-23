@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Homework8.DbModels
+namespace Homework8.Models
 {
     public class ExpressionModel
     {

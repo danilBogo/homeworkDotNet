@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using Homework8.Controllers.Calculator;
 
-namespace Homework8.Services
+namespace Homework8.Services.Calculator
 {
     public abstract class CalculatorDecorator : ICalculator
     {

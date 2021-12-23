@@ -1,6 +1,4 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace Benchmark
+﻿namespace Benchmark
 {
     public class Methods
     {

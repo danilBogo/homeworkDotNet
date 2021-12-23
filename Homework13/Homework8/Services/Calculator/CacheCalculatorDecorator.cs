@@ -1,10 +1,8 @@
-﻿using System.Data.Common;
-using Homework8.DbModels;
-using Homework8.Services;
-using Homework8.Services.Calculator;
+﻿using Homework8.Controllers.Calculator;
+using Homework8.Models;
 using Expression = System.Linq.Expressions.Expression;
 
-namespace Homework8.Controllers.Calculator
+namespace Homework8.Services.Calculator
 {
     public class CacheCalculatorDecorator : CalculatorDecorator
     {

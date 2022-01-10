@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseServer", "DatabaseServer\DatabaseServer.csproj", "{A20D7A97-F30E-4106-89B9-665D0AA833E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicServer", "BusinessLogicServer\BusinessLogicServer.csproj", "{3DD2B289-C5E5-4C6B-8BDB-6CBD1657EF81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{B0FBD3FC-13AD-40FC-BBB6-64412231ABDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A20D7A97-F30E-4106-89B9-665D0AA833E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20D7A97-F30E-4106-89B9-665D0AA833E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20D7A97-F30E-4106-89B9-665D0AA833E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20D7A97-F30E-4106-89B9-665D0AA833E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD2B289-C5E5-4C6B-8BDB-6CBD1657EF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD2B289-C5E5-4C6B-8BDB-6CBD1657EF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD2B289-C5E5-4C6B-8BDB-6CBD1657EF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD2B289-C5E5-4C6B-8BDB-6CBD1657EF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FBD3FC-13AD-40FC-BBB6-64412231ABDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FBD3FC-13AD-40FC-BBB6-64412231ABDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FBD3FC-13AD-40FC-BBB6-64412231ABDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FBD3FC-13AD-40FC-BBB6-64412231ABDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

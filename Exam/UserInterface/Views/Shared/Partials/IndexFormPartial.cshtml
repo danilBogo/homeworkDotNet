@@ -1,0 +1,52 @@
+﻿@model UserInterface.Models.Index.IndexFormViewModel
+
+<div class="d-flex justify-content-center">
+    @using (Html.BeginForm("Form", "Application", FormMethod.Post))
+    {
+        <form method="post">
+            <label asp-for="@Model.Name"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.Name">
+                <span class="text-danger" asp-validation-for="@Model.Name"></span>
+            </div>
+
+            <label asp-for="@Model.HitPoints"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.HitPoints" value="@Model.HitPoints">
+                <span class="text-danger" asp-validation-for="@Model.HitPoints"></span>
+            </div>
+
+            <label asp-for="@Model.AttackModifier"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.AttackModifier">
+                <span class="text-danger" asp-validation-for="@Model.AttackModifier"></span>
+            </div>
+
+            <label asp-for="@Model.DamageModifier"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.DamageModifier">
+                <span class="text-danger" asp-validation-for="@Model.DamageModifier"></span>
+            </div>
+
+            <label asp-for="@Model.Damage"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.Damage">
+                <span class="text-danger" asp-validation-for="@Model.Damage"></span>
+            </div>
+
+            <label asp-for="@Model.ArmorClass"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.ArmorClass">
+                <span class="text-danger" asp-validation-for="@Model.ArmorClass"></span>
+            </div>
+
+            <label asp-for="@Model.NumberAttacksPerRound"></label>
+            <div >
+                <input class="form-control" asp-for="@Model.NumberAttacksPerRound">
+                <span class="text-danger" asp-validation-for="@Model.NumberAttacksPerRound"></span>
+            </div>
+
+            <input class="form-control mt-2" type="submit" value="Отправить" @(Model.HitPoints == 0 && Model.Name != null ? "disabled=\"disabled\"" : "")/>
+        </form>
+    }
+</div>

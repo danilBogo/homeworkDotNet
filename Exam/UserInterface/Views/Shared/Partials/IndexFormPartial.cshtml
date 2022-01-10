@@ -1,0 +1,11 @@
+﻿@model UserInterface.Models.Index.IndexFormViewModel
+
+<div class="d-flex justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        @using (Html.BeginForm("Form", "Application", FormMethod.Post))
+        {
+            @Html.EditorForModel()
+            <input class="form-control mt-3" type="submit" value="Отправить"/>
+        }
+    </div>
+</div>

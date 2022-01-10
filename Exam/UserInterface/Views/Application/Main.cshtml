@@ -1,0 +1,8 @@
+﻿@model UserInterface.Models.Index.IndexViewModel
+@{
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("Partials/IndexFormPartial", Model.IndexFormViewModel)
+
+@await Html.PartialAsync("Partials/IndexResultPartial", Model.IndexResultViewModel)
